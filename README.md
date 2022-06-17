@@ -20,13 +20,13 @@ docker-compose up -d
 The following command will generate a key and copy it to your .env file, ensuring that your user sessions and encrypted data remain secure:
 docker-compose exec app php artisan key:generate
 
-You now have the environment settings required to run your application. To cache these settings into a file, which will boost your application’s load speed, run:
+You now have the environment settings required to run your application. To cache these settings into a file, which will boost your application’s load speed, run: <br>
 docker-compose exec app php artisan config:cache
 
-To create a new user, execute an interactive bash shell on the db container with docker-compose exec:
+To create a new user, execute an interactive bash shell on the db container with docker-compose exec: <br>
 docker-compose exec db bash
 
-Inside the container, log into the MySQL root administrative account:
+Inside the container, log into the MySQL root administrative account: <br>
 mysql -u root -p
 
 password root : qwerty1234
@@ -42,10 +42,10 @@ mysql> EXIT;
 Finally, exit the container:
 exit
 
-First, test the connection to MySQL by running the Laravel artisan migrate command, which creates a migrations table in the database from inside the container:
+First, test the connection to MySQL by running the Laravel artisan migrate command, which creates a migrations table in the database from inside the container: <br>
 docker-compose exec app php artisan migrate
 
-use seeder to fill table
+use seeder to fill table <br>
 docker-compose exec app php artisan db:seed --class=UsersTableSeeder
 
 OPEN APPLICATION HOST
