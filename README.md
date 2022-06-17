@@ -12,6 +12,9 @@ Author : Harby Anwardi
 
 ## About Laravel-Docker
 build docker
+
+Copy file .env.example to .env
+
 docker-compose up -d
 
 The following command will generate a key and copy it to your .env file, ensuring that your user sessions and encrypted data remain secure:
